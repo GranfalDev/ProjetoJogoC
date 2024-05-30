@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-I",
+                "${workspaceFolder}/include",
+                "-L",
+                "${workspaceFolder}/lib",
+                "-g",
+                "${workspaceFolder}/src/main.c",
+                "-o",
+                "${workspaceFolder}/bin/meu_jogo.exe",
+                "-lfreeglut",
+                "-lopengl32",
+                "-lglu32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilação personalizada usando gcc"
+        }
+    ]
+}
